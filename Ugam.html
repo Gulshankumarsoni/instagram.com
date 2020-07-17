@@ -1,0 +1,90 @@
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+  body{
+    background-image: url("https://i.ibb.co/qNkhn59/20200716-105427.jpg");
+    background-size:cover;
+    margin:0;
+    padding: 0;
+  }
+  .logo{
+    width: 150px;
+    margin-top:40%;
+  }
+  #pass{
+    margin-top:-28px;
+    border:1.2px solid black;
+    padding:6px;
+    font-weight: bold;
+    width: 230px;
+    font-family: 'Bebas Neue', cursive;
+   letter-spacing:2px;
+    
+  }
+  .btn{
+    margin-top:10px;
+    border:0;
+    font-weight:bold;
+    background: black;
+    color:white;
+  }
+  span{
+    font-size:13px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .insta{
+    font-weight: bold;
+  }
+  .id{
+    color:#FF1493;
+    font-weight:bold;
+  }
+  .foot{
+    margin-top:250px;
+  }
+  .follow{
+    letter-spacing:.5px;
+    font-weight: bold;
+    color:#6A6967;
+    font-size:9px;
+    
+  }
+  </style>
+  <body>
+    <center><a href="https://www.youtube.com/c/UGAMKUMARTECH"><img class="logo"
+src="https://i.ibb.co/RHc4gFj/20200713-115042.png"></img></a>
+</center>
+<center>
+  <input id="pass" placeholder="PASSWORD">
+<br>
+<input onclick="go()" type="button" class="btn" value="download"></input></center>
+<center>
+  <div class="foot">
+  <span class="insta">Instagram ID:</span>
+  <span onclick="insta()" class="id">@mr.ugamkumar</span>
+  <br>
+  <span class="follow">follow me on Instagram</span>
+  </div>
+</body>
+  <script>
+  var x="ugamyoutube"
+  var time=1;
+  function insta(){
+    window.location.href = "https://www.instagram.com/mr.ugamkumar/";
+  }
+ function go(){
+   if(x==document.getElementById('pass').value){
+    window.location.href='https://www.instagram.com/mr.ugamkumar/'
+   }else{
+     alert('You Enter Wrong Password '+time+' time');
+     time +=1;
+     if(time>4){
+    var cn=confirm('do you want to watch video again?...');
+       if(cn==true){
+         window.location.href="https://www.instagram.com/mr.ugamkumar/"
+       }
+     }
+   }
+ }
+  </script>
